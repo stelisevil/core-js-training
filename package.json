@@ -1,0 +1,26 @@
+{
+  "name": "core-js-training",
+  "version": "0.0.0",
+  "description": "Training for Core JS tings",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stelisevil/core-js-training.git"
+  },
+  "author": "Stelios Tsinontas <stelisevil@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stelisevil/core-js-training/issues"
+  },
+  "homepage": "https://github.com/stelisevil/core-js-training#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.4.2",
+    "regenerator-runtime": "^0.12.0"
+  }
+}
