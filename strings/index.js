@@ -19,7 +19,7 @@
   it should return false
 */
 export const amString = (str) => {
-
+  return typeof(str) === 'string';
 }
 
 /*
@@ -28,7 +28,7 @@ export const amString = (str) => {
   I expect this function to return an int value for how long the string is
 */
 export const howLong = (str) => {
-
+  return str.length;
 }
 
 /*
@@ -37,7 +37,10 @@ export const howLong = (str) => {
   I expect this function to join the strings a and b together
 */
 export const join = (a, b) => {
-
+  if (typeof a === 'string' && typeof b === 'string') {
+    return a + b;
+  }
+  return String(a) + String(b);
 }
 
 /*
@@ -46,7 +49,7 @@ export const join = (a, b) => {
   I expect this function to return true if the char argument exists in the string
 */
 export const characterExists = (string, char) => {
-
+  return string.includes(char);
 };
 
 /*
@@ -56,7 +59,10 @@ export const characterExists = (string, char) => {
   character in a string
 */
 export const whereIsCharacter = (string, char) => {
-
+  if (string.indexOf(char) === -1) {
+    return false
+  }
+  return string.indexOf(char);
 }
 
 /*
@@ -65,5 +71,7 @@ export const whereIsCharacter = (string, char) => {
   I expect this string to remove the spaces from a string
 */
 export const removeSpaces = (string) => {
-
+  return string.trim().replace(' ','');
 }
+
+// Note: characterExists, whereIsCharacter worked first time!
