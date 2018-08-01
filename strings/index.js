@@ -37,7 +37,13 @@ export const howLong = (str) => {
   I expect this function to join the strings a and b together
 */
 export const join = (a, b) => {
-  return a+b; // I expected concat(a, b) to also work, but it didnt??
+  if (typeof a === 'string' && typeof b === 'string') {
+    return a+b;
+  } else {
+    let convertA = String(a);
+    let convertB = String(b);
+    return convertA+convertB;
+  }
 }
 
 /*
@@ -56,7 +62,11 @@ export const characterExists = (string, char) => {
   character in a string
 */
 export const whereIsCharacter = (string, char) => {
-  return string.indexOf(char);
+  if (string.indexOf(char) === -1) {
+    return false
+  } else {
+    return string.indexOf(char);
+  }
 }
 
 /*

@@ -34,7 +34,7 @@ describe('Strings - basics', () => {
   describe('join', () => {
     it('should join the 2 strings together', () => {
       expect(join('hello ' ,'there')).toEqual('hello there');
-      expect(join(1,2)).toEqual(3); // Could potentially test for arrays too?
+      expect(join(1,2)).toEqual("12"); // Could potentially test for arrays too?
     });
   });
 
@@ -50,7 +50,9 @@ describe('Strings - basics', () => {
   describe('whereIsCharacter', () => {
     it('should return an int value for the location of the character in the string', () => {
       expect(whereIsCharacter('hello', 'e')).toEqual(1);
-      expect(whereIsCharacter('hello', 'f')).toEqual(-1); // not sure this is necessary?
+    });
+    it('should return false if the character doesn\'t exist in the string', () => {
+      expect(whereIsCharacter('hello', 'f')).toEqual(false);
     });
   });
 
