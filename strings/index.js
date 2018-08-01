@@ -38,12 +38,9 @@ export const howLong = (str) => {
 */
 export const join = (a, b) => {
   if (typeof a === 'string' && typeof b === 'string') {
-    return a+b;
-  } else {
-    let convertA = String(a);
-    let convertB = String(b);
-    return convertA+convertB;
+    return a + b;
   }
+  return String(a) + String(b);
 }
 
 /*
@@ -64,9 +61,8 @@ export const characterExists = (string, char) => {
 export const whereIsCharacter = (string, char) => {
   if (string.indexOf(char) === -1) {
     return false
-  } else {
-    return string.indexOf(char);
   }
+  return string.indexOf(char);
 }
 
 /*
