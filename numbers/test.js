@@ -25,6 +25,7 @@ describe('Number test', () => {
       expect(amNumber([])).toEqual(false);
       expect(amNumber(null)).toEqual(false);
       expect(amNumber()).toEqual(false);
+      expect(amNumber('0')).toEqual(false);
     });
   });
   describe('add', () => {
