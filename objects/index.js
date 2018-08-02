@@ -72,8 +72,8 @@ export const getObjectValues = (obj) => {
 /*
   I expect this function to join the 2 objects together, returning a single
     object which contains properties from both.
-  If objB has a property which is the same as a property of A, then B should
-    take priority as you're copying B into A
+  If objB has a property which is the same as a property of objA, then objB
+   should take priority; as you're copying B into A
 */
 export const joinObjects = (objA, objB) => {
 
