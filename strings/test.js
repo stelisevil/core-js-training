@@ -7,7 +7,7 @@ import {
   removeSpaces
 } from '.';
 
-xdescribe('Strings - basics', () => {
+describe('Strings - basics', () => {
 
   describe('amString', () => {
     it('should return true if the argument is a string', () => {

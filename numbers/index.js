@@ -81,10 +81,11 @@ export const roundDown = (num) => {
   converted to a number
 */
 export const convertToInt = (str) => {
-  if (Number.isNaN(Number(str)) || typeof str !== 'string') {
+  var parInt = Number.parseInt(str, 10);
+  if (Number.isNaN(parInt) || typeof str !== 'string') {
     return false;
   }
-  return Math.round(Number(str)); // this took me by far the longest
+  return Number(parInt);
 }
 
 /*
@@ -102,5 +103,5 @@ export const isOdd = (num) => {
   provided by the decimals argument
 */
 export const variableDecimalPlace = (num, decimals) => {
-  return Number(parseFloat(num).toFixed(decimals));
+  return Number(Number.parseFloat(num).toFixed(decimals));
 }
