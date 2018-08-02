@@ -85,7 +85,7 @@ export const convertToInt = (str) => {
   if (Number.isNaN(parInt) || typeof str !== 'string') {
     return false;
   }
-  return Number(parInt);
+  return parInt;
 }
 
 /*
