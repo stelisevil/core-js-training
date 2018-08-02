@@ -17,28 +17,28 @@
   I expect this function to tell me if variable num is a number
 */
 export const amNumber = (num) => {
-
+  return typeof(num) === 'number';
 }
 
 /*
   I expect this function to return me the sum of a and b
 */
 export const add = (a, b) => {
-
+  return a + b;
 }
 
 /*
   I expect this function to subtract a and b
 */
 export const subtract = (a, b) => {
-
+  return a - b;
 }
 
 /*
   I expect this function to multiple a and b
 */
 export const multiply = (a, b) => {
-
+  return a * b;
 }
 
 /*
@@ -47,28 +47,31 @@ export const multiply = (a, b) => {
     divide by 0 (i.e. return false)
 */
 export const divide = (a, b) => {
-
+  if (b === 0) {
+    return false;
+  }
+  return a / b;
 }
 
 /*
   I expect this function round me to the nearest int
 */
 export const round = (num) => {
-
+  return Math.round(num);
 }
 
 /*
   I expect this function to round up to the nearest int
 */
 export const roundUp = (num) => {
-
+  return Math.ceil(num);
 }
 
 /*
   I expect this function to round down to the nearest int
 */
 export const roundDown = (num) => {
-
+  return Math.floor(num);
 }
 
 /*
@@ -78,14 +81,20 @@ export const roundDown = (num) => {
   converted to a number
 */
 export const convertToInt = (str) => {
-
+  if (Number.isNaN(Number(str)) || typeof str !== 'string') {
+    return false;
+  }
+  return Math.round(Number(str)); // this took me by far the longest
 }
 
 /*
   I expect this function to return true if a number is odd, false if it is even
 */
 export const isOdd = (num) => {
-
+  if (num % 2 === 0) {
+    return false;
+  }
+  return true;
 }
 
 /*
@@ -93,5 +102,5 @@ export const isOdd = (num) => {
   provided by the decimals argument
 */
 export const variableDecimalPlace = (num, decimals) => {
-
+  return Number(parseFloat(num).toFixed(decimals));
 }
