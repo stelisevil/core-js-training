@@ -48,7 +48,7 @@ export const getFirstName = (obj) => {
 }
 
 /*
-  I expect this function to return whichever property is passed in from the
+  I expect this function to return whichever key is passed in from the
     object. Fail gracefully if not found
 */
 export const getKeyFromObject = (obj, key) => {
