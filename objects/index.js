@@ -78,3 +78,11 @@ export const getObjectValues = (obj) => {
 export const joinObjects = (objA, objB) => {
 
 }
+
+/*
+  I expect this function to add a isObject property onto the object passed in:
+  isObject should also be set to true
+*/
+export const addIsObjectProperty = (obj) => {
+
+}

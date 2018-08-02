@@ -4,7 +4,8 @@ import {
   getKeyFromObject,
   getObjectKeys,
   getObjectValues,
-  joinObjects
+  joinObjects,
+  addIsObjectProperty
 } from '.';
 
 const user = {
@@ -70,6 +71,13 @@ describe('Object test', () => {
     });
     it('overwrites the properties of objA with objB', () => {
       expect(joinObjects({ foo: 'bar' }, { foo: 'bat' })).toEqual({ foo: 'bat' });
+    });
+  });
+  describe('addIsObjectProperty', () => {
+    it('should add the correct property and value', () => {
+      const newObj = addIsObjectProperty(user);
+      expect(newObj).toHaveProperty('isObject');
+      expect(newObj.isObject).toEqual(true);
     });
   });
 });
