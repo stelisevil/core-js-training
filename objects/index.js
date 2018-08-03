@@ -36,10 +36,7 @@
     ...be careful with this one... ;)
 */
 export const isObject = (obj) => {
-  if (typeof obj === 'object') {
-    return true;
-  }
-  return false;
+  return (typeof obj === "object" && !Array.isArray(obj) && obj !== null);
 }
 
 /*
@@ -47,7 +44,7 @@ export const isObject = (obj) => {
   If the property firstName doesn't exist on the object, return false
 */
 export const getFirstName = (obj) => {
-
+  return obj.firstName || false;
 }
 
 /*
@@ -55,21 +52,21 @@ export const getFirstName = (obj) => {
     object. Fail gracefully if not found
 */
 export const getKeyFromObject = (obj, key) => {
-
+  return obj[key] || false;
 }
 
 /*
   I expect this function to return me an array of the objects keys
 */
 export const getObjectKeys = (obj) => {
-
+  return Object.keys(obj);
 }
 
 /*
   I expect this function to return me an array of the objects values
 */
 export const getObjectValues = (obj) => {
-
+  return Object.values(obj);
 }
 
 /*
@@ -79,7 +76,7 @@ export const getObjectValues = (obj) => {
    should take priority; as you're copying B into A
 */
 export const joinObjects = (objA, objB) => {
-
+  return Object.assign(objA, objB);
 }
 
 /*
@@ -87,5 +84,5 @@ export const joinObjects = (objA, objB) => {
   isObject should also be set to true
 */
 export const addIsObjectProperty = (obj) => {
-
+  return obj['isObject'] = true; // I cant get this to work so I'm leaving it with what I thought should work
 }

@@ -13,7 +13,7 @@ import {
   variableDecimalPlace
 } from '.';
 
-xdescribe('Number test', () => {
+describe('Number test', () => {
   describe('amNumber', () => {
     it('returns true if the value is a number', () => {
       expect(amNumber(0)).toEqual(true);
