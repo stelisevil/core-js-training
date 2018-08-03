@@ -33,7 +33,7 @@ describe('Object test', () => {
       expect(isObject(null)).toEqual(false);
     });
   });
-  describe('getFirstName', () => {
+  xdescribe('getFirstName', () => {
     it('returns the firstName property if it exists', () => {
       expect(getFirstName(user)).toEqual('Matthew');
     });
@@ -41,7 +41,7 @@ describe('Object test', () => {
       expect(getFirstName({})).toEqual(false);
     });
   });
-  describe('getKeyFromObject', () => {
+  xdescribe('getKeyFromObject', () => {
     it('returns the key for the object', () => {
       expect(getKeyFromObject(user, 'email')).toEqual('matthew@gmail.com')
     });
@@ -49,17 +49,17 @@ describe('Object test', () => {
       expect(getKeyFromObject(user, 'random-key')).toEqual(false);
     })
   });
-  describe('getObjectKeys', () => {
+  xdescribe('getObjectKeys', () => {
     it('returns an array of keys', () => {
       expect(getObjectKeys(user)).toEqual(['firstName', 'lastName', 'email']);
     });
   });
-  describe('getObjectValues', () => {
+  xdescribe('getObjectValues', () => {
     it('returns an array of values', () => {
       expect(getObjectValues(user)).toEqual(['Matthew', 'Tsinontas', 'matthew@gmail.com']);
     });
   });
-  describe('joinObjects', () => {
+  xdescribe('joinObjects', () => {
     it('joins 2 objects together', () => {
       expect(joinObjects(user, address)).toEqual({
         firstName: 'Matthew',
@@ -73,7 +73,7 @@ describe('Object test', () => {
       expect(joinObjects({ foo: 'bar' }, { foo: 'bat' })).toEqual({ foo: 'bat' });
     });
   });
-  describe('addIsObjectProperty', () => {
+  xdescribe('addIsObjectProperty', () => {
     it('should add the correct property and value', () => {
       const newObj = addIsObjectProperty(user);
       expect(newObj).toHaveProperty('isObject');

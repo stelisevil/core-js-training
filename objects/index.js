@@ -36,7 +36,10 @@
     ...be careful with this one... ;)
 */
 export const isObject = (obj) => {
-
+  if (typeof obj === 'object') {
+    return true;
+  }
+  return false;
 }
 
 /*
