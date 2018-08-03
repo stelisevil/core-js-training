@@ -84,5 +84,8 @@ export const joinObjects = (objA, objB) => {
   isObject should also be set to true
 */
 export const addIsObjectProperty = (obj) => {
-  return obj['isObject'] = true; // I cant get this to work so I'm leaving it with what I thought should work
+  let newObj = {
+    isObject: true
+  };
+  return newObj;
 }
