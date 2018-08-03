@@ -76,6 +76,7 @@ export const getObjectValues = (obj) => {
    should take priority; as you're copying B into A
 */
 export const joinObjects = (objA, objB) => {
+
   return Object.assign(objA, objB);
 }
 
@@ -84,8 +85,9 @@ export const joinObjects = (objA, objB) => {
   isObject should also be set to true
 */
 export const addIsObjectProperty = (obj) => {
-  const isObj = {
-    isObject: true
-  };
-  return Object.assign(obj, isObj);
+  if (!isObject(obj)) {
+    return false;
+  }
+  obj.isObject = true;
+  return obj;
 }
