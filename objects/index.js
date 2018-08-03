@@ -84,8 +84,8 @@ export const joinObjects = (objA, objB) => {
   isObject should also be set to true
 */
 export const addIsObjectProperty = (obj) => {
-  let newObj = {
+  const isObj = {
     isObject: true
   };
-  return newObj;
+  return Object.assign(obj, isObj);
 }

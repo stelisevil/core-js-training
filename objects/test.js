@@ -79,7 +79,7 @@ describe('Object test', () => {
       expect(newObj).toHaveProperty('isObject');
       expect(newObj.isObject).toEqual(true);
       expect(newObj).toHaveProperty('firstName');
-      expect(newObj.isObject).toEqual('Matthew');
+      expect(newObj.firstName).toEqual('Matthew');
     });
   });
 });
