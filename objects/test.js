@@ -74,10 +74,15 @@ describe('Object test', () => {
     });
   });
   describe('addIsObjectProperty', () => {
+    it('returns false if the arguement is not an object', () => {
+      expect(addIsObjectProperty([])).toEqual(false);
+    });
     it('should add the correct property and value', () => {
       const newObj = addIsObjectProperty(user);
       expect(newObj).toHaveProperty('isObject');
       expect(newObj.isObject).toEqual(true);
+      expect(newObj).toHaveProperty('firstName');
+      expect(newObj.firstName).toEqual('Matthew');
     });
   });
 });
