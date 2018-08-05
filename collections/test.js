@@ -8,7 +8,7 @@ import {
 } from '.'
 import employees from './data.json';
 
-describe('Final Test', () => {
+xdescribe('Final Test', () => {
   describe('getEmployeeById', () => {
     it('gets the correct employee by their id', () => {
       expect(getEmployeeById(1)).toEqual({

@@ -1,4 +1,4 @@
-import {isOdd} from 'core-js-training/numbers/index.js';
+import {isOdd} from '../numbers';
 
 /*
   Array basics
@@ -30,7 +30,7 @@ export const isArray = (arr) => {
   I expect this function to return me a new empty array
 */
 export const returnNewArray = () => {
-  return Array.from('');
+  return [];
 }
 
 /*
@@ -117,10 +117,8 @@ export const joinTwoArrays = (arrA, arrB) => {
   number is odd ;)
 */
 export const findFirstOddNumber = (arr) => {
-  arr.find(function(item) {
-    if (isOdd(item)) {
-      return item;
-    }
+  return arr.find(function(item) {
+    return isOdd(item);
   });
 }
 
@@ -128,27 +126,46 @@ export const findFirstOddNumber = (arr) => {
   I expect this function to take an array and double each number in the array
     e.g. arr = [1, 2, 3, 4], i expect [2, 4, 6, 8]
 */
-export const doubleEveryNumber = (arr) => {
-  const doubledArray = [];
-  arr.forEach(function(item) {
-    doubledArray.push(item*2)
-  });
-  return doubledArray;
-}
 
+// old method before learning shorter method
+// export const doubleEveryNumber = (arr) => {
+//   const doubledArray = [];
+//   arr.forEach(function(item) {
+//     doubledArray.push(item*2)
+//   });
+//   return doubledArray;
+// }
+
+export const doubleEveryNumber = (arr) => {
+  return arr.map(function(item){
+    return item*2;
+  });
+}
 /*
   I expect this function to take an array of numbers, and return me an array
   with all the odd numbers filtered out, i.e. only contain the even numbers
 */
+
+
+// export const filterOutOddNumbers = (arr) => {
+//   const filteredArray = [];
+//   arr.forEach(function(item) {
+//     if (!isOdd(item)) {
+//       filteredArray.push(item)
+//     }
+//   });
+//   return filteredArray;
+// }
+
 export const filterOutOddNumbers = (arr) => {
-  const filteredArray = [];
-  arr.forEach(function(item) {
-    if (!isOdd(item)) {
-      filteredArray.push(item)
-    }
-  });
-  return filteredArray;
+  return arr.filter(function(item) {
+      return !isOdd(item);
+  })
 }
+
+// export const filterOutOddNumbers = (arr) => {
+//   return arr.filter(!isOdd);
+// }
 
 /*
   I expect this function to return true if every number in the array is odd
@@ -162,8 +179,8 @@ export const isEveryNumberOdd = (arr) => {
   the numbers
 */
 export const addAllNumbersTogether = (arr) => {
-  return arr.reduce(function(a, b) {
-    return a+b;
+  return arr.reduce(function(previous, current) {
+    return previous + current;
   }, 0)
 }
 
