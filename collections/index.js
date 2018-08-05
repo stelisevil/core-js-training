@@ -20,8 +20,8 @@ import employees from './data.json';
   go for it - that's the whole notion of functional programming
 
   The format for this test will be slightly different - the data that I will
-  be using for the test suite lives in ./data.js. I have written you an import
-  statement and you should use these data sets for the test.
+  be using for the test suite lives in ./data.json. I have written you an 
+  import statement and you should use these data sets for the test.
 */
 
 /*
