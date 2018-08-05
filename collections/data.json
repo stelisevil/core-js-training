@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "fistName": "Matthew",
+    "lastName": "Tsinontas",
+    "department": "Engineering",
+    "contactNumber": "01611119090",
+    "taxCode": "123AL",
+    "salary": 38000
+  },
+  {
+    "id": 2,
+    "fistName": "Joe",
+    "lastName": "Bloggs",
+    "department": "Engineering",
+    "contactNumber": "",
+    "taxCode": "123AL",
+    "salary": 42000
+  },
+  {
+    "id": 3,
+    "fistName": "Stevie",
+    "lastName": "Wonder",
+    "department": "Audio",
+    "contactNumber": "01338940929",
+    "taxCode": "108LT",
+    "salary": 28000
+  },
+  {
+    "id": 4,
+    "fistName": "Joe",
+    "lastName": "Davidson",
+    "department": "Accounting",
+    "contactNumber": "02289380291",
+    "taxCode": "129BT",
+    "salary": 55000
+  }
+]
