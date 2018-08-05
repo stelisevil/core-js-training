@@ -20,28 +20,28 @@
 /*
   I expect this function to tell me if the argument arr is an array
 */
-const isArray = (arr) => {
+export const isArray = (arr) => {
 
 }
 
 /*
   I expect this function to return me a new empty array
 */
-const returnNewArray = () => {
+export const returnNewArray = () => {
 
 }
 
 /*
   I expect this function to tell me how many items are in the array
 */
-const arrayItemCount = (arr) => {
+export const arrayItemCount = (arr) => {
 
 }
 
 /*
   I expect this function to return me the first item in the array
 */
-const getFirstItem = (arr) => {
+export const getFirstItem = (arr) => {
 
 }
 
@@ -49,7 +49,7 @@ const getFirstItem = (arr) => {
   I expect this function to get me an item from the array based off the idx
   argument
 */
-const getItemFromIndex = (arr, idx) => {
+export const getItemFromIndex = (arr, idx) => {
 
 }
 
@@ -57,7 +57,7 @@ const getItemFromIndex = (arr, idx) => {
   I expect this function to return true if the item exists in the array, false
   if it doesnt
 */
-const doesItemExistInArray = (arr, item) => {
+export const doesItemExistInArray = (arr, item) => {
 
 }
 
@@ -65,28 +65,28 @@ const doesItemExistInArray = (arr, item) => {
   I expect this function to tell me the index of where the item sits inside the
   array
 */
-const getIndexOfItem = (arr, item) => {
+export const getIndexOfItem = (arr, item) => {
 
 }
 
 /*
   I expect this function to take the item and add it to the end of the array
 */
-const addItemToEndOfArray = (arr, item) => {
+export const addItemToEndOfArray = (arr, item) => {
 
 }
 
 /*
   I expect this function to take the item and add it to the start of the array
 */
-const addItemToStartOfArray = (arr) => {
+export const addItemToStartOfArray = (arr, item) => {
 
 }
 
 /*
   I expect this function to take an item and add it to the index of the array
 */
-const addItemIntoIndex = (arr, idx, item) => {
+export const addItemIntoIndex = (arr, idx, item) => {
 
 }
 
@@ -94,14 +94,14 @@ const addItemIntoIndex = (arr, idx, item) => {
   I expect this function to remove one item from the array at the provided
   index
 */
-const removeSingleItemFromIndex = (arr, idx) => {
+export const removeSingleItemFromIndex = (arr, idx) => {
 
 }
 
 /*
   I expect this function to join 2 arrays together
 */
-const joinTwoArrays = (arrA, arrB) => {
+export const joinTwoArrays = (arrA, arrB) => {
 
 }
 
@@ -110,7 +110,7 @@ const joinTwoArrays = (arrA, arrB) => {
   ... remember, you have a function in your number test for checking if a
   number is odd ;)
 */
-const findFirstOddNumber = (arr) => {
+export const findFirstOddNumber = (arr) => {
 
 }
 
@@ -118,22 +118,22 @@ const findFirstOddNumber = (arr) => {
   I expect this function to take an array and double each number in the array
     e.g. arr = [1, 2, 3, 4], i expect [2, 4, 6, 8]
 */
-const doubleEveryNumber = (arr) => {
+export const doubleEveryNumber = (arr) => {
 
 }
 
 /*
   I expect this function to take an array of numbers, and return me an array
-  with all the odd numbers filtered out
+  with all the odd numbers filtered out, i.e. only contain the even numbers
 */
-const filterOutOddNumbers = (arr) => {
+export const filterOutOddNumbers = (arr) => {
 
 }
 
 /*
   I expect this function to return true if every number in the array is odd
 */
-const isEveryNumberOdd = (arr) => {
+export const isEveryNumberOdd = (arr) => {
 
 }
 
@@ -141,7 +141,7 @@ const isEveryNumberOdd = (arr) => {
   I expect this function to take an array of numbers and return the sum of all
   the numbers
 */
-const addAllNumbersTogether = (arr) => {
+export const addAllNumbersTogether = (arr) => {
 
 }
 
@@ -149,6 +149,6 @@ const addAllNumbersTogether = (arr) => {
   I expect this function to take an array of numbers and sort them in numerical
   order
 */
-const numericallySortItems = (arr) => {
+export const numericallySortItems = (arr) => {
 
 }
