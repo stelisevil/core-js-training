@@ -1,3 +1,5 @@
+import {isOdd} from 'core-js-training/numbers/index.js';
+
 /*
   Array basics
 
@@ -21,28 +23,28 @@
   I expect this function to tell me if the argument arr is an array
 */
 export const isArray = (arr) => {
-
+  return Array.isArray(arr);
 }
 
 /*
   I expect this function to return me a new empty array
 */
 export const returnNewArray = () => {
-
+  return Array.from('');
 }
 
 /*
   I expect this function to tell me how many items are in the array
 */
 export const arrayItemCount = (arr) => {
-
+  return arr.length;
 }
 
 /*
   I expect this function to return me the first item in the array
 */
 export const getFirstItem = (arr) => {
-
+  return arr[0];
 }
 
 /*
@@ -50,7 +52,7 @@ export const getFirstItem = (arr) => {
   argument
 */
 export const getItemFromIndex = (arr, idx) => {
-
+  return arr[idx];
 }
 
 /*
@@ -58,7 +60,7 @@ export const getItemFromIndex = (arr, idx) => {
   if it doesnt
 */
 export const doesItemExistInArray = (arr, item) => {
-
+  return arr.includes(item);
 }
 
 /*
@@ -66,28 +68,31 @@ export const doesItemExistInArray = (arr, item) => {
   array
 */
 export const getIndexOfItem = (arr, item) => {
-
+  return arr.indexOf(item);
 }
 
 /*
   I expect this function to take the item and add it to the end of the array
 */
 export const addItemToEndOfArray = (arr, item) => {
-
+  arr.push(item);
+  return arr;
 }
 
 /*
   I expect this function to take the item and add it to the start of the array
 */
 export const addItemToStartOfArray = (arr, item) => {
-
+  arr.unshift(item);
+  return arr;
 }
 
 /*
   I expect this function to take an item and add it to the index of the array
 */
 export const addItemIntoIndex = (arr, idx, item) => {
-
+  arr.splice(idx, 0, item);
+  return arr;
 }
 
 /*
@@ -95,14 +100,15 @@ export const addItemIntoIndex = (arr, idx, item) => {
   index
 */
 export const removeSingleItemFromIndex = (arr, idx) => {
-
+  arr.splice(idx, 1);
+  return arr;
 }
 
 /*
   I expect this function to join 2 arrays together
 */
 export const joinTwoArrays = (arrA, arrB) => {
-
+  return arrA.concat(arrB);
 }
 
 /*
@@ -111,7 +117,11 @@ export const joinTwoArrays = (arrA, arrB) => {
   number is odd ;)
 */
 export const findFirstOddNumber = (arr) => {
-
+  arr.find(function(item) {
+    if (isOdd(item)) {
+      return item;
+    }
+  });
 }
 
 /*
@@ -119,7 +129,11 @@ export const findFirstOddNumber = (arr) => {
     e.g. arr = [1, 2, 3, 4], i expect [2, 4, 6, 8]
 */
 export const doubleEveryNumber = (arr) => {
-
+  const doubledArray = [];
+  arr.forEach(function(item) {
+    doubledArray.push(item*2)
+  });
+  return doubledArray;
 }
 
 /*
@@ -127,14 +141,20 @@ export const doubleEveryNumber = (arr) => {
   with all the odd numbers filtered out, i.e. only contain the even numbers
 */
 export const filterOutOddNumbers = (arr) => {
-
+  const filteredArray = [];
+  arr.forEach(function(item) {
+    if (!isOdd(item)) {
+      filteredArray.push(item)
+    }
+  });
+  return filteredArray;
 }
 
 /*
   I expect this function to return true if every number in the array is odd
 */
 export const isEveryNumberOdd = (arr) => {
-
+  return arr.every(isOdd);
 }
 
 /*
@@ -142,7 +162,9 @@ export const isEveryNumberOdd = (arr) => {
   the numbers
 */
 export const addAllNumbersTogether = (arr) => {
-
+  return arr.reduce(function(a, b) {
+    return a+b;
+  }, 0)
 }
 
 /*
@@ -150,5 +172,8 @@ export const addAllNumbersTogether = (arr) => {
   order
 */
 export const numericallySortItems = (arr) => {
-
+  arr.sort(function(a,b) {
+    return a - b;
+  });
+  return arr;
 }
