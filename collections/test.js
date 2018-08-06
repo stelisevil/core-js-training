@@ -84,7 +84,7 @@ describe('Final Test', () => {
       expect(calculateTotalSalary()).toEqual(163000);
     });
   });
-  xdescribe('organiseEmployeesByDepartment', () => {
+  describe('organiseEmployeesByDepartment', () => {
     it('returns an object of users sorted into department', () => {
       const userObj = organiseEmployeesByDepartment();
       expect(Object.keys(userObj)).toEqual(['Engineering', 'Audio', 'Accounting']);
