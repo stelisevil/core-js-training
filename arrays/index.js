@@ -16,7 +16,7 @@ import {isOdd} from '../numbers';
   In case you need a refresher, here is what an array looks like, note the []
   bracket notation and the comma after a value to note the end of that value
 
-    const fibboaci = [1, 1, 2, 3, 5, 8, 13];
+    const fibbnoaci = [1, 1, 2, 3, 5, 8, 13];
 */
 
 /*
