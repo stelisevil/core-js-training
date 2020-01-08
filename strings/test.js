@@ -34,7 +34,7 @@ describe('Strings - basics', () => {
   describe('join', () => {
     it('should join the 2 strings together', () => {
       expect(join('hello ' ,'there')).toEqual('hello there');
-      expect(join(1,2)).toEqual("12"); // Could potentially test for arrays too?
+      expect(join('1','2')).toEqual("12"); // Could potentially test for arrays too?
     });
   });
 
